@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Enregistrer un nouveau projet</h2>
+    <form [formGroup]="projectForm" (ngSubmit)="onSaveProject()">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" required
+               class="form-control" formControlName="nom">
+      </div>
+        <div class="form-group">
+        <label for="DateFin">Date Fin</label>
+        <input type="date" id="DateFin" required
+               class="form-control" formControlName="DateFin">
+      </div>
+      <div class="form-group">
+        <label for="Impact">Impact</label>
+        <input type="text"  id="Impact" required
+               class="form-control" formControlName="Impact">
+        </div>
+      <div class="form-group">
+        <label for="Desc">Description</label>
+        <input type="text" id="Desc" required
+                  class="form-control" formControlName="Desc">
+      </div>
+      <button class="btn btn-success" [disabled]="projectForm.invalid"
+              type="submit">Enregistrer
+      </button>
+      <button class="btn btn-danger" routerLink="projects/project-list" >Annuler
+      </button>
+    </form>
+  </div>
+</div>

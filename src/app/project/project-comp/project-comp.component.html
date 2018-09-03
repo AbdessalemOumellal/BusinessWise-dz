@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ projet.Nom }}</h1>
+    <h3>{{ projet.DateFin }}</h3>
+    <p>{{ projet.Impact }}</p>
+    <p>{{ projet.Outcomes }}</p>
+    <p>{{ projet.Desc }}</p>
+    <button class="btn btn-default" (click)="onBack()">Retour</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-success">
+        <div class="ct-chart" id="dailySalesChart"></div>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Daily Sales</h4>
+        <p class="card-category">
+          <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> updated 4 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+

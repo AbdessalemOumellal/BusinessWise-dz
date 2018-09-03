@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand navbar-light bg-light" >
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="list-group-item list-group-item-action" class="btn btn-info" >
+        <a routerLinkActive="active" class="nav-link" routerLink="projects/project-list"> Project <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="list-group-item list-group-item-action" class="btn btn-info" >
+        <a routerLinkActive="active" class="nav-link" routerLink="planif/preview"> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="list-group-item list-group-item-action" dropdown class="btn btn-info">
+        <a dropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">
+          Gestionnaire de projet
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="gProjet/calendar">Calendrier</a>
+          <a class="dropdown-item" routerLink="gProjet/jalon">Jalon</a> </div>
+      </li>
+      <li class="list-group-item list-group-item-action" class="btn btn-info" dropdown>
+        <a dropdownToggle routerLinkActive="active" class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Planificateur de Projet
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+          <a class="dropdown-item" routerLink="planif/outcomes">Outcomes</a>
+          <a class="dropdown-item" routerLink="planif/output">Outputs</a>
+          <a class="dropdown-item" routerLink="planif/activities">Activities</a>
+          </div>
+      </li>
+      <li class="list-group-item list-group-item-action" class="btn btn-info" >
+        <a routerLinkActive="active" class="nav-link" routerLink="gRes/ressources">Gestionnaire des ressources <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="list-group-item list-group-item-action" class="btn btn-info" >
+        <a routerLinkActive="active" class="nav-link" routerLink="gTask/gestionTask" >Gestionnaire des taches <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" >
+        <a routerLink="auth/signup" *ngIf="!isAuth" class="btn btn-danger" >Créer un compte</a>
+      </li>
+      <li routerLinkActive="active" >
+        <a routerLink="auth/signin" *ngIf="!isAuth" class="btn btn-danger" >Connexion</a>
+      </li>
+      <li routerLinkActive="active">
+        <a (click)="onSignOut()"
+           style="cursor:pointer"
+           *ngIf="isAuth" class="btn btn-danger">Déconnexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
